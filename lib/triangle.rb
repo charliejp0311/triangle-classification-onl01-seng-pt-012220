@@ -33,8 +33,14 @@ class Triangle
   end
 
   class TriangleError < StandardError
-    def message
-      "invalid triangle"
+    def message_zero
+      "Tiangles cannot have a 0 length side."
+    end
+    def message_negative_number
+      "Triangles cannot have negative nubers for a length."
+    end
+    def breaks_lessthan_equal_to_law
+      "Triangles have two sides that add up to be greater than the third always."
     end
   end
 end
