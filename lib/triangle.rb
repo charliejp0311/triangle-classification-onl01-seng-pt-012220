@@ -13,6 +13,13 @@ class Triangle
   end
 
   def kind
+    if @sides.include?(0)
+      begin
+        raise TriangleError
+      rescue TriangleError => error
+        puts error.message
+      end 
+    end
     if @side_one == @side_two && @side_one == @side_three
       :equilateral
     end
@@ -20,6 +27,8 @@ class Triangle
   end
 
   class TriangleError < StandardError
-
+    def message
+      "invalid triangle"
+    end
   end
 end
