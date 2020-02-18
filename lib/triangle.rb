@@ -14,11 +14,23 @@ class Triangle
 
   def kind
     if @sides.include?(0)
-      raise TriangleError
+      begin
+        raise TriangleError
+      rescue TriangleError => error
+        puts error.message_zero
+      end
     elsif @sides.bsearch{|i| i < 0}
-      raise TriangleError
+      begin
+        raise TriangleError
+      rescue TriangleError => error
+        puts error.message_negative_number
+      end
     elsif (@side_one + @side_two <= @side_three) || (@side_one + @side_three <= @side_two) || (@side_two + @side_three <= @side_one)
-      raise TriangleError
+      begin
+        raise TriangleError
+      rescue TriangleError => error
+        puts error.breaks_lessthan_equal_to_law
+      end
     else
       if @side_one == @side_two && @side_one == @side_three
         :equilateral
