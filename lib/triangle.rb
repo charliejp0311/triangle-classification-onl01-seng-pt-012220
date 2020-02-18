@@ -8,7 +8,7 @@ class Triangle
     @side_two = side_two
     @side_three = side_three
     @sides = [side_one, side_two, side_three]
-    binding.pry
+    #binding.pry
     kind
   end
 
