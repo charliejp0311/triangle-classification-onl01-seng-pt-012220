@@ -15,7 +15,7 @@ class Triangle
   def kind
     if @sides.include?(0)
       raise TriangleError
-    elsif take(@sides) != Array.class 
+    elsif take(@sides) != Array.class
       raise TriangleError
     else
       if @side_one == @side_two && @side_one == @side_three
