@@ -13,7 +13,7 @@ class Triangle
   end
 
   def kind
-    if @sides.include?(0) 
+    if @sides.include?(0)
       raise TriangleError
     elsif !take(@sides)
       raise TriangleError
