@@ -1,6 +1,6 @@
 class Triangle
   # write code here
-  attr_accessor :side_one, :side_two, :side_three, :sides 
+  attr_accessor :side_one, :side_two, :side_three, :sides
   def initialize(side_one, side_two, side_three)
     @sides = Array.new(side_one, side_two, side_three)
     @side_one = side_one
@@ -8,9 +8,9 @@ class Triangle
     @side_three = side_three
   end
 
-  def kind 
-    
-    
+  def kind
+
+
   end
 
   class TriangleError < StandardError
