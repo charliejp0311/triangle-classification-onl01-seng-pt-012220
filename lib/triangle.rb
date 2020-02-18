@@ -15,11 +15,11 @@ class Triangle
   def kind
     if @sides.include?(0)
       binding.pry
-      begin
+      #begin
         raise TriangleError
-      rescue TriangleError => error
-        puts error.message
-      end
+      #rescue TriangleError => error
+      #  puts error.message
+      #end
     else
       if @side_one == @side_two && @side_one == @side_three
         :equilateral
