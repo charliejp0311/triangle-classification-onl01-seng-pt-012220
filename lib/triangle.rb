@@ -13,7 +13,7 @@ class Triangle
   end
 
   def kind
-    if @sides.include?(0) 
+    if @sides.include?(0)
       begin
         raise TriangleError
       rescue TriangleError => error
@@ -28,7 +28,7 @@ class Triangle
         :scalene
       end
     end
-    
+
 
   end
 
