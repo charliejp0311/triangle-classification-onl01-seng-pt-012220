@@ -18,7 +18,7 @@ class Triangle
         raise TriangleError
       rescue TriangleError => error
         puts error.message
-      end 
+      end
     end
     if @side_one == @side_two && @side_one == @side_three
       :equilateral
